@@ -34,7 +34,7 @@ const ContactSection = () => {
   const contactMethods = [
     {
       type: 'Secure Email',
-      value: 'contact@nexveil.secure',
+      value: 'contactnexveil@proton.me',
       icon: '📧',
       availability: '24/7'
     },
