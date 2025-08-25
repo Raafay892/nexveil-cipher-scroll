@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				mono: ['JetBrains Mono', 'Courier New', 'monospace'],
+				display: ['Orbitron', 'Arial Black', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// NEXVEIL Cyber Theme Colors
+				cyber: {
+					green: 'hsl(var(--cyber-green))',
+					blue: 'hsl(var(--cyber-blue))',
+					red: 'hsl(var(--cyber-red))',
+					yellow: 'hsl(var(--cyber-yellow))',
 				}
 			},
 			borderRadius: {
@@ -88,7 +99,15 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				// NEXVEIL Cyber Animations
+				'glitch': 'glitch 0.6s infinite',
+				'matrix': 'matrix-rain 3s linear infinite',
+				'typewriter': 'typewriter 2s steps(40) 1s both',
+				'cursor': 'cursor-blink 1s infinite',
+				'scan': 'scan-line 2s linear infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'data-flow': 'data-flow 3s linear infinite',
 			}
 		}
 	},
