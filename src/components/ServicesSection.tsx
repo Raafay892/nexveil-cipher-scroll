@@ -39,12 +39,12 @@ const ServicesSection = () => {
       icon: '👥'
     },
     {
-      id: 'socmint',
-      code: 'SOCMINT',
-      title: 'Social Media Intelligence',
-      description: 'Comprehensive social media monitoring and sentiment analysis across platforms.',
-      features: ['Platform Monitoring', 'Sentiment Analysis', 'Influence Mapping', 'Trend Detection'],
-      icon: '📱'
+      id: 'techint',
+      code: 'TECHINT',
+      title: 'Technical Intelligence',
+      description: 'Advanced technical intelligence gathering through technological analysis and profiling.',
+      features: ['Organizational Profiling', 'Asset Profiling'],
+      icon: '⚙️'
     }
   ];
 
