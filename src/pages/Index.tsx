@@ -4,10 +4,12 @@ import ServicesSection from '@/components/ServicesSection';
 import CybersecuritySection from '@/components/CybersecuritySection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
+import ContentProtection from '@/components/ContentProtection';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground custom-scrollbar">
+      <ContentProtection />
       {/* Navigation */}
       <Navigation />
       

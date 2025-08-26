@@ -20,10 +20,10 @@ const AboutSection = () => {
   ];
 
   const timeline = [
-    { year: '2019', event: 'Founded with focus on OSINT services' },
-    { year: '2020', event: 'Expanded to full spectrum intelligence' },
-    { year: '2022', event: 'Launched cybersecurity division' },
-    { year: '2024', event: 'AI-powered analysis integration' }
+    { year: '2022', event: 'Founded with focus on OSINT services' },
+    { year: '2023', event: 'Expanded to full spectrum intelligence' },
+    { year: '2024', event: 'Launched Cybersecurity division' },
+    { year: '2025', event: 'AI-powered analysis integration' }
   ];
 
   return (
@@ -117,32 +117,6 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            {/* Certifications & Compliance */}
-            <Card className="cyber-border bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6 space-y-4">
-                <h3 className="font-display text-xl font-bold text-foreground">
-                  CERTIFICATIONS
-                </h3>
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="p-3 border border-primary/20 rounded-sm">
-                    <div className="font-mono text-primary text-sm">ISO_27001</div>
-                    <div className="text-xs text-muted-foreground">Security Standard</div>
-                  </div>
-                  <div className="p-3 border border-primary/20 rounded-sm">
-                    <div className="font-mono text-primary text-sm">SOC_2</div>
-                    <div className="text-xs text-muted-foreground">Compliance</div>
-                  </div>
-                  <div className="p-3 border border-primary/20 rounded-sm">
-                    <div className="font-mono text-primary text-sm">GDPR</div>
-                    <div className="text-xs text-muted-foreground">Data Protection</div>
-                  </div>
-                  <div className="p-3 border border-primary/20 rounded-sm">
-                    <div className="font-mono text-primary text-sm">NIST</div>
-                    <div className="text-xs text-muted-foreground">Framework</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Team Stats */}
             <Card className="cyber-border bg-card/50 backdrop-blur-sm">

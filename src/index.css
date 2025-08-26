@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Content Protection Styles */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* Disable image dragging */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Disable print styles */
+@media print {
+  * {
+    display: none !important;
+  }
+}
+
 /* NEXVEIL Design System - Cybersecurity & Intelligence Theme */
 
 @layer base {
