@@ -50,7 +50,7 @@ const Index = () => {
                 <span className="font-mono text-xs text-muted-foreground">SECURE_SITE</span>
               </div>
               <div className="font-mono text-xs text-muted-foreground">
-                SSL_ENCRYPTED | ISO_27001_CERTIFIED
+                SSL_ENCRYPTED
               </div>
             </div>
           </div>
