@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,13 +57,33 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    // Prepare the data to send
+    const emailParams = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      service: formData.service,
+      message: formData.message,
+      urgency: formData.urgency
+    };
+
+    try {
+      // Send the email using EmailJS
+      const response = await emailjs.send(
+        'service_id',  // Your EmailJS service ID
+        'template_id',  // Your EmailJS template ID
+        emailParams,    // The data from the form
+        'user_id'       // Your EmailJS user ID
+      );
+      
+      console.log('Email sent successfully', response);
+
       toast({
         title: "Message Transmitted",
         description: "Your secure message has been received. Expect contact within 24 hours.",
       });
+
+      // Reset the form data
       setFormData({
         name: '',
         email: '',
@@ -71,7 +92,16 @@ const ContactSection = () => {
         message: '',
         urgency: 'standard'
       });
-    }, 2000);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Message Failed",
+        description: "There was an issue transmitting your message. Please try again later.",
+        variant: "destructive",
+      });
+    }
+
+    setIsSubmitting(false);
   };
 
   const handleInputChange = (field: string, value: string) => {
