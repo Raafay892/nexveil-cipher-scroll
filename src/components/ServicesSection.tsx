@@ -11,7 +11,7 @@ const ServicesSection = () => {
       code: 'OSINT',
       title: 'Open Source Intelligence',
       description: 'Advanced data collection and analysis from publicly available information sources.',
-      features: ['Social Media Monitoring', 'Digital Footprint Analysis', 'Threat Intelligence', 'Data Mining'],
+      features: ['IMINT', 'GEOINT', 'HUMINT', 'TECHINT'],
       icon: '🔍'
     },
     {
@@ -19,7 +19,7 @@ const ServicesSection = () => {
       code: 'IMINT',
       title: 'Imagery Intelligence',
       description: 'Sophisticated image and video analysis for intelligence gathering and verification.',
-      features: ['Satellite Imagery Analysis', 'Geospatial Intelligence', 'Visual Verification', 'Pattern Recognition'],
+      features: ['Visual Verification', 'Pattern Recognition'],
       icon: '📡'
     },
     {
@@ -27,7 +27,7 @@ const ServicesSection = () => {
       code: 'GEOINT',
       title: 'Geospatial Intelligence',
       description: 'Location-based intelligence services using cutting-edge mapping and spatial analysis.',
-      features: ['Geographic Analysis', 'Location Tracking', 'Spatial Data Mining', 'Territory Mapping'],
+      features: ['GEOGRAPHIC ANALYSIS', 'Aerial Surveillance', 'territory MAPPING', 'Boundary & Border Monitoring'],
       icon: '🌍'
     },
     {
