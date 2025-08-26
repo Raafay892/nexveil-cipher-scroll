@@ -139,7 +139,7 @@ const AboutSection = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="font-mono text-sm text-muted-foreground">Years Combined Experience</span>
-                    <span className="font-mono text-primary">150+</span>
+                    <span className="font-mono text-primary">50+</span>
                   </div>
                 </div>
               </CardContent>
