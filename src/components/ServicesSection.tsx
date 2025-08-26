@@ -35,7 +35,7 @@ const ServicesSection = () => {
       code: 'HUMINT',
       title: 'Human Intelligence',
       description: 'Strategic intelligence gathering through human networks and behavioral analysis.',
-      features: ['Social Engineering Assessment', 'Behavioral Analysis', 'Network Mapping', 'Risk Assessment'],
+      features: ['PII', 'Social media presence', 'Behavioural Analysis'],
       icon: '👥'
     },
     {
