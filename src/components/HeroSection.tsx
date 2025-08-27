@@ -75,13 +75,19 @@ const HeroSection = () => {
       <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl mx-auto">
         {/* Main Title */}
         <div className="space-y-6">
-          <h1 className="font-display text-5xl md:text-7xl font-black text-foreground flex items-center justify-center">
+          <h1 className="font-display text-5xl md:text-7xl font-black text-foreground flex items-center justify-center group">
             <img 
               src="/lovable-uploads/d41bc7af-09af-4dc6-9d85-5457bb5e28b9.png" 
-              alt="Nexveil Logo" 
-              className="w-12 h-12 md:w-16 md:h-16 mr-1"
+              alt="Nexveil Logo as N" 
+              className="w-12 h-12 md:w-16 md:h-16 transition-all duration-500 group-hover:drop-shadow-2xl group-hover:drop-shadow-primary/50 group-hover:scale-110"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+              onLoad={(e) => {
+                e.currentTarget.style.display = 'block';
+              }}
             />
-            EX<span className="text-gradient-cyber">VEIL</span>
+            <span className="ml-1">EX</span><span className="text-gradient-cyber">VEIL</span>
           </h1>
           <div className="h-16 flex items-center justify-center">
             <p className="font-mono text-lg md:text-xl text-primary tracking-wider">
