@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection = () => {
@@ -26,6 +27,13 @@ const AboutSection = () => {
     { year: '2025', event: 'AI-powered analysis integration' }
   ];
 
+  const clientStats = [
+    { metric: 'Satisfied Clients', value: '150+', description: 'Global Organizations' },
+    { metric: 'Success Rate', value: '98.5%', description: 'Mission Completion' },
+    { metric: 'Response Time', value: '<2hrs', description: 'Critical Operations' },
+    { metric: 'Data Accuracy', value: '99.2%', description: 'Intelligence Verification' }
+  ];
+
   return (
     <section id="about" className="py-20 bg-card relative overflow-hidden">
       {/* Background Effects */}
@@ -39,7 +47,7 @@ const AboutSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
             A specialized intelligence firm dedicated to providing cutting-edge OSINT, IMINT, GEOINT, 
-            HUMINT, SOCMINT, and cybersecurity services for organizations navigating the complex digital landscape.
+            HUMINT, TECHINT, and cybersecurity services for organizations navigating the complex digital landscape.
           </p>
         </div>
 
@@ -93,6 +101,24 @@ const AboutSection = () => {
 
           {/* Company Timeline & Stats */}
           <div className="space-y-8">
+            {/* Satisfied Clients Stats */}
+            <Card className="cyber-border bg-card/50 backdrop-blur-sm">
+              <CardContent className="p-6 space-y-4">
+                <h3 className="font-display text-xl font-bold text-foreground">
+                  CLIENT_SUCCESS_METRICS
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {clientStats.map((stat, index) => (
+                    <div key={index} className="text-center p-3 cyber-border bg-card/20 rounded-sm">
+                      <div className="font-display text-2xl font-bold text-primary">{stat.value}</div>
+                      <div className="font-mono text-xs text-foreground font-semibold">{stat.metric}</div>
+                      <div className="text-xs text-muted-foreground">{stat.description}</div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Timeline */}
             <Card className="cyber-border bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6 space-y-4">
@@ -116,7 +142,6 @@ const AboutSection = () => {
                 </div>
               </CardContent>
             </Card>
-
 
             {/* Team Stats */}
             <Card className="cyber-border bg-card/50 backdrop-blur-sm">

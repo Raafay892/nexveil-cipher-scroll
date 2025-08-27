@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/nexveil-hero-bg.jpg';
@@ -6,7 +7,7 @@ const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   
-  const fullText = 'ADVANCED INTELLIGENCE SERVICES';
+  const fullText = 'NEXVEIL ADVANCED INTELLIGENCE SERVICES';
   
   useEffect(() => {
     let currentIndex = 0;
@@ -73,7 +74,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl mx-auto">
         {/* Main Title */}
-        <div className="space-y-4">
+        <div className="space-y-6">
           <h1 className="font-display text-5xl md:text-7xl font-black text-foreground">
             NEX<span className="text-gradient-cyber">VEIL</span>
           </h1>
@@ -86,9 +87,14 @@ const HeroSection = () => {
         </div>
 
         {/* Tagline */}
-        <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-          Cutting-edge <span className="text-primary">OSINT</span>, <span className="text-primary">IMINT</span>, <span className="text-primary">GEOINT</span>, <span className="text-primary">HUMINT</span>, <span className="text-primary">SOCMINT</span> and cybersecurity services for the digital age.
-        </p>
+        <div className="space-y-4">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Cutting-edge <span className="text-primary">OSINT</span>, <span className="text-primary">IMINT</span>, <span className="text-primary">GEOINT</span>, <span className="text-primary">HUMINT</span>, <span className="text-primary">TECHINT</span> and cybersecurity services for the digital age.
+          </p>
+          <p className="text-muted-foreground text-base max-w-xl mx-auto">
+            Professional intelligence services powered by advanced technology and expert analysis.
+          </p>
+        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">

@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -11,7 +12,7 @@ const ServicesSection = () => {
       code: 'OSINT',
       title: 'Open Source Intelligence',
       description: 'Advanced data collection and analysis from publicly available information sources.',
-      features: ['IMINT', 'GEOINT', 'HUMINT', 'TECHINT'],
+      features: ['Social Media Analysis', 'Public Records Investigation', 'Digital Footprint Mapping', 'Online Threat Assessment'],
       icon: '🔍'
     },
     {
@@ -19,7 +20,7 @@ const ServicesSection = () => {
       code: 'IMINT',
       title: 'Imagery Intelligence',
       description: 'Sophisticated image and video analysis for intelligence gathering and verification.',
-      features: ['Visual Verification', 'Pattern Recognition'],
+      features: ['Visual Verification', 'Pattern Recognition', 'Satellite Image Analysis', 'Forensic Photography'],
       icon: '📡'
     },
     {
@@ -27,23 +28,23 @@ const ServicesSection = () => {
       code: 'GEOINT',
       title: 'Geospatial Intelligence',
       description: 'Location-based intelligence services using cutting-edge mapping and spatial analysis.',
-      features: ['GEOGRAPHIC ANALYSIS', 'Aerial Surveillance', 'territory MAPPING', 'Boundary & Border Monitoring'],
+      features: ['Geographic Analysis', 'Aerial Surveillance', 'Territory Mapping', 'Boundary & Border Monitoring'],
       icon: '🌍'
     },
     {
       id: 'humint',
       code: 'HUMINT',
       title: 'Human Intelligence',
-      description: 'Strategic intelligence gathering through human networks and behavioral analysis.',
-      features: ['PII', 'Social media presence', 'Behavioural Analysis'],
+      description: 'Strategic intelligence gathered through human networks and behavioral analysis.',
+      features: ['Personally Identifiable Information (PII)', 'Social Media Presence Analysis', 'Behavioral Analysis', 'Background Check Investigation'],
       icon: '👥'
     },
     {
       id: 'techint',
       code: 'TECHINT',
       title: 'Technical Intelligence',
-      description: 'Advanced technical intelligence gathering through technological analysis and profiling.',
-      features: ['Organizational Profiling', 'Asset Profiling'],
+      description: 'Advanced intelligence gathered through technical means and technological analysis.',
+      features: ['Technical Vulnerability Assessment', 'Digital Forensics', 'Network Analysis', 'Cyber Threat Intelligence'],
       icon: '⚙️'
     }
   ];
@@ -60,7 +61,7 @@ const ServicesSection = () => {
             INTELLIGENCE SERVICES
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Comprehensive intelligence solutions powered by advanced technology and expert analysis
+            Comprehensive intelligence services powered by advanced technology and expert analysis
           </p>
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
         </div>
@@ -120,6 +121,54 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Professional Tools Section */}
+        <div className="mt-20">
+          <div className="text-center space-y-4 mb-12">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+              PROFESSIONAL TOOLS & PLATFORMS
+            </h3>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Industry-leading tools for comprehensive intelligence and cybersecurity operations
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="cyber-border bg-card/30 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="font-display text-lg text-primary">
+                  VULNERABILITY ASSESSMENT & PENETRATION TESTING
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex flex-wrap gap-2">
+                  {['Nessus', 'OpenVAS', 'Metasploit', 'Burp Suite', 'Nmap', 'Qualys', 'Core Impact'].map((tool) => (
+                    <span key={tool} className="font-mono text-xs bg-primary/10 text-primary px-2 py-1 rounded">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="cyber-border bg-card/30 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="font-display text-lg text-primary">
+                  DARK WEB MONITORING & THREAT INTELLIGENCE
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex flex-wrap gap-2">
+                  {['Recorded Future', 'DarkOwl', 'Echosec', 'Sixgill', 'Flashpoint'].map((tool) => (
+                    <span key={tool} className="font-mono text-xs bg-primary/10 text-primary px-2 py-1 rounded">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Data Flow Animation */}
