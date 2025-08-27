@@ -56,7 +56,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/d41bc7af-09af-4dc6-9d85-5457bb5e28b9.png" 
               alt="Nexveil Logo" 
-              className="w-8 h-8 mr-1"
+              className="w-8 h-8"
             />
             EXVEIL
             <span className="animate-cursor text-primary">_</span>
