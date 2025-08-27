@@ -70,10 +70,10 @@ const ContactSection = () => {
     try {
       // Send the email using EmailJS
       const response = await emailjs.send(
-        'service_id',  // Your EmailJS service ID
-        'template_id',  // Your EmailJS template ID
-        emailParams,    // The data from the form
-        'user_id'       // Your EmailJS user ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_YOUR_SERVICE_ID',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_YOUR_TEMPLATE_ID', 
+        emailParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
       );
       
       console.log('Email sent successfully', response);
