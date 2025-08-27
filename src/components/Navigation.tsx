@@ -52,8 +52,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="font-display text-2xl font-bold text-gradient-cyber">
-            NEXVEIL
+          <div className="flex items-center font-display text-2xl font-bold text-gradient-cyber">
+            <img 
+              src="/lovable-uploads/d41bc7af-09af-4dc6-9d85-5457bb5e28b9.png" 
+              alt="Nexveil Logo" 
+              className="w-8 h-8 mr-1"
+            />
+            EXVEIL
             <span className="animate-cursor text-primary">_</span>
           </div>
 

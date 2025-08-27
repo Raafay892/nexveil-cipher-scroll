@@ -123,53 +123,6 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Professional Tools Section */}
-        <div className="mt-20">
-          <div className="text-center space-y-4 mb-12">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-              PROFESSIONAL TOOLS & PLATFORMS
-            </h3>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Industry-leading tools for comprehensive intelligence and cybersecurity operations
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="cyber-border bg-card/30 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="font-display text-lg text-primary">
-                  VULNERABILITY ASSESSMENT & PENETRATION TESTING
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="flex flex-wrap gap-2">
-                  {['Nessus', 'OpenVAS', 'Metasploit', 'Burp Suite', 'Nmap', 'Qualys', 'Core Impact'].map((tool) => (
-                    <span key={tool} className="font-mono text-xs bg-primary/10 text-primary px-2 py-1 rounded">
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="cyber-border bg-card/30 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="font-display text-lg text-primary">
-                  DARK WEB MONITORING & THREAT INTELLIGENCE
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="flex flex-wrap gap-2">
-                  {['Recorded Future', 'DarkOwl', 'Echosec', 'Sixgill', 'Flashpoint'].map((tool) => (
-                    <span key={tool} className="font-mono text-xs bg-primary/10 text-primary px-2 py-1 rounded">
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
 
         {/* Data Flow Animation */}
         <div className="mt-16 relative">
