@@ -72,7 +72,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl mx-auto pt-16">
         {/* Main Title */}
         <div className="space-y-6">
           <h1 className="font-display text-5xl md:text-7xl font-black text-foreground flex items-center justify-center group">
@@ -99,8 +99,8 @@ const HeroSection = () => {
 
         {/* Tagline */}
         <div className="space-y-4">
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Cutting-edge <span className="text-primary">OSINT</span>, <span className="text-primary">IMINT</span>, <span className="text-primary">GEOINT</span>, <span className="text-primary">HUMINT</span>, <span className="text-primary">TECHINT</span> and cybersecurity services for the digital age.
+          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed italic border-l-2 border-primary pl-6">
+            "Open source intelligence transforms scattered data into strategic advantage."
           </p>
           <p className="text-muted-foreground text-base max-w-xl mx-auto">
             Professional intelligence services powered by advanced technology and expert analysis.

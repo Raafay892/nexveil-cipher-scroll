@@ -6,8 +6,10 @@ import CybersecuritySection from '@/components/CybersecuritySection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import ContentProtection from '@/components/ContentProtection';
+import { useUserIP } from '@/hooks/useUserIP';
 
 const Index = () => {
+  const { ip, loading } = useUserIP();
   return (
     <div className="min-h-screen bg-background text-foreground custom-scrollbar">
       <ContentProtection />
@@ -57,18 +59,10 @@ const Index = () => {
           </div>
           
           <div className="mt-4 pt-4 border-t border-border/50">
-            <div className="flex flex-wrap justify-center gap-4 text-xs font-mono text-muted-foreground">
-              <span>OSINT</span>
-              <span>•</span>
-              <span>IMINT</span>
-              <span>•</span>
-              <span>GEOINT</span>
-              <span>•</span>
-              <span>HUMINT</span>
-              <span>•</span>
-              <span>TECHINT</span>
-              <span>•</span>
-              <span>CYBERSECURITY</span>
+            <div className="flex justify-center">
+              <span className="text-xs font-mono text-muted-foreground">
+                VISITOR IP: {loading ? 'DETECTING...' : ip}
+              </span>
             </div>
           </div>
         </div>
