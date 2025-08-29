@@ -78,15 +78,19 @@ const CybersecuritySection = () => {
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        {/* Enhanced Stats Grid */}
+        <div className="responsive-grid max-w-5xl mx-auto mb-20">
           {stats.map((stat, index) => (
-            <Card key={index} className="cyber-border bg-card/30 backdrop-blur-sm text-center">
-              <CardContent className="p-4 space-y-2">
-                <div className={`font-display text-2xl font-bold text-${stat.color}`}>
+            <Card 
+              key={index} 
+              className="cyber-border bg-card/30 backdrop-blur-sm text-center hover-lift animate-zoom-in group cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardContent className="p-4 sm:p-6 space-y-3">
+                <div className={`font-display text-2xl sm:text-3xl md:text-4xl font-bold text-${stat.color} group-hover:animate-glitch animate-neon-flicker`}>
                   {stat.value}
                 </div>
-                <div className="font-mono text-xs text-muted-foreground">
+                <div className="font-mono text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors mobile-text-sm">
                   {stat.label}
                 </div>
               </CardContent>
@@ -96,26 +100,27 @@ const CybersecuritySection = () => {
 
         {/* Service Tabs */}
         <div className="space-y-8">
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {Object.entries(cybersecurityServices).map(([key, service]) => (
+          {/* Enhanced Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 animate-slide-up">
+            {Object.entries(cybersecurityServices).map(([key, service], index) => (
               <Button
                 key={key}
                 variant="outline"
                 size="sm"
                 onClick={() => setActiveTab(key)}
-                className={`font-mono cyber-red-hover ${activeTab === key ? 'cyber-red-active' : ''}`}
+                className={`font-mono cyber-red-hover hover-lift animate-slide-down mobile-full ${activeTab === key ? 'cyber-red-active' : ''}`}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {service.title.toUpperCase()}
               </Button>
             ))}
           </div>
 
-          {/* Active Service Content */}
-          <Card className="cyber-border bg-card/50 backdrop-blur-sm max-w-4xl mx-auto">
-            <CardHeader className="space-y-4">
-              <div className="flex items-center justify-between">
-                <CardTitle className="font-display text-2xl text-foreground">
+          {/* Enhanced Active Service Content */}
+          <Card className="cyber-border bg-card/50 backdrop-blur-sm max-w-5xl mx-auto hover-lift animate-zoom-in">
+            <CardHeader className="space-y-4 sm:space-y-6 mobile-p-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mobile-stack">
+                <CardTitle className="font-display text-xl sm:text-2xl md:text-3xl text-foreground animate-slide-right mobile-center">
                   {cybersecurityServices[activeTab as keyof typeof cybersecurityServices].title}
                 </CardTitle>
                 <Badge 
@@ -126,41 +131,46 @@ const CybersecuritySection = () => {
                       ? 'default'
                       : 'secondary'
                   }
-                  className="font-mono text-xs"
+                  className="font-mono text-xs sm:text-sm animate-neon-flicker hover-glow"
                 >
                   {cybersecurityServices[activeTab as keyof typeof cybersecurityServices].riskLevel.toUpperCase()}_SECURITY
                 </Badge>
               </div>
-              <CardDescription className="text-base">
+              <CardDescription className="text-sm sm:text-base md:text-lg animate-slide-left">
                 {cybersecurityServices[activeTab as keyof typeof cybersecurityServices].description}
               </CardDescription>
             </CardHeader>
 
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Features */}
-                <div className="space-y-3">
-                  <h4 className="font-mono text-sm text-primary font-semibold">
+            <CardContent className="space-y-6 mobile-p-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                {/* Enhanced Features */}
+                <div className="space-y-4 animate-slide-up">
+                  <h4 className="font-mono text-sm sm:text-base text-primary font-semibold animate-neon-flicker">
                     SERVICE_FEATURES:
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {cybersecurityServices[activeTab as keyof typeof cybersecurityServices].features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-center">
-                        <span className="text-primary mr-2 font-mono">▸</span>
+                      <li key={idx} className="text-sm sm:text-base text-muted-foreground flex items-center hover:text-foreground transition-colors animate-slide-right" style={{ animationDelay: `${idx * 0.1}s` }}>
+                        <span className="text-primary mr-3 font-mono text-lg hover:text-cyber-green transition-colors">▸</span>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Tools */}
-                <div className="space-y-3">
-                  <h4 className="font-mono text-sm text-primary font-semibold">
+                {/* Enhanced Tools */}
+                <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                  <h4 className="font-mono text-sm sm:text-base text-primary font-semibold animate-neon-flicker">
                     TOOLS_&_PLATFORMS:
                   </h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {cybersecurityServices[activeTab as keyof typeof cybersecurityServices].tools.map((tool, idx) => (
-                      <Badge key={idx} variant="outline" className="font-mono text-xs">
+                      <Badge 
+                        key={idx} 
+                        variant="outline" 
+                        className="font-mono text-xs sm:text-sm hover-glow hover:scale-105 transition-all duration-300 animate-slide-left"
+                        style={{ animationDelay: `${idx * 0.1}s` }}
+                      >
                         {tool}
                       </Badge>
                     ))}
@@ -168,8 +178,8 @@ const CybersecuritySection = () => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-border">
-                <Button variant="cyber" size="lg" className="w-full md:w-auto">
+              <div className="pt-6 border-t border-border animate-slide-up">
+                <Button variant="cyber" size="lg" className="w-full sm:w-auto hover-lift hover:scale-105 transition-all duration-300 mobile-full">
                   REQUEST_ASSESSMENT
                 </Button>
               </div>

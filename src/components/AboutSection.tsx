@@ -51,15 +51,15 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Mission & Vision */}
-          <div className="space-y-8">
-            <Card className="cyber-border bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6 space-y-4">
-                <h3 className="font-display text-xl font-bold text-primary">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Enhanced Mission & Vision */}
+          <div className="space-y-8 animate-slide-right">
+            <Card className="cyber-border bg-card/50 backdrop-blur-sm hover-lift animate-zoom-in">
+              <CardContent className="p-6 sm:p-8 space-y-4">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-primary animate-neon-flicker">
                   MISSION_STATEMENT
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base hover:text-foreground transition-colors">
                   To empower organizations with actionable intelligence and robust cybersecurity solutions, 
                   enabling informed decision-making in an increasingly complex digital world. We bridge the 
                   gap between raw data and strategic insights through advanced technology and expert analysis.
@@ -67,12 +67,12 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="cyber-border bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6 space-y-4">
-                <h3 className="font-display text-xl font-bold text-secondary">
+            <Card className="cyber-border bg-card/50 backdrop-blur-sm hover-lift animate-zoom-in" style={{ animationDelay: '0.2s' }}>
+              <CardContent className="p-6 sm:p-8 space-y-4">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-secondary animate-neon-flicker">
                   VISION
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base hover:text-foreground transition-colors">
                   To become the global leader in intelligence services, setting new standards for accuracy, 
                   security, and innovation. We envision a future where our AI-enhanced human intelligence 
                   capabilities provide unparalleled insights for critical decision-making.
@@ -80,18 +80,28 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            {/* Core Values */}
-            <div className="space-y-4">
-              <h3 className="font-display text-xl font-bold text-foreground">
+            {/* Enhanced Core Values */}
+            <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground animate-neon-flicker">
                 CORE_VALUES
               </h3>
               <div className="grid gap-4">
                 {values.map((value, index) => (
-                  <div key={index} className="flex items-start gap-4 p-4 cyber-border bg-card/30 backdrop-blur-sm rounded-sm">
-                    <div className="text-2xl">{value.icon}</div>
+                  <div 
+                    key={index} 
+                    className="flex items-start gap-4 p-4 sm:p-6 cyber-border bg-card/30 backdrop-blur-sm rounded-sm hover-lift group animate-slide-right"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="text-2xl sm:text-3xl animate-floating hover-glow" style={{ animationDelay: `${index * 0.5}s` }}>
+                      {value.icon}
+                    </div>
                     <div>
-                      <h4 className="font-mono text-primary font-semibold">{value.title.toUpperCase()}</h4>
-                      <p className="text-sm text-muted-foreground mt-1">{value.description}</p>
+                      <h4 className="font-mono text-primary font-semibold text-sm sm:text-base group-hover:text-cyber-green transition-colors">
+                        {value.title.toUpperCase()}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground mt-1 group-hover:text-foreground transition-colors">
+                        {value.description}
+                      </p>
                     </div>
                   </div>
                 ))}
