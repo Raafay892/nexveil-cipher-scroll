@@ -49,19 +49,17 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-background/95 backdrop-blur-xl border-b border-primary/30 shadow-xl shadow-primary/10' 
-          : 'bg-transparent'
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-background/95 backdrop-blur-lg border-b border-primary/20 shadow-lg shadow-primary/5' : 'bg-transparent'
       }`}>
-        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Enhanced Logo */}
-            <div className="flex items-center font-display text-xl sm:text-2xl font-bold text-gradient-cyber group cursor-pointer transition-all duration-500 hover:scale-110 animate-glow-pulse">
+            {/* Logo */}
+            <div className="flex items-center font-display text-2xl font-bold text-gradient-cyber group cursor-pointer transition-all duration-300 hover:scale-105">
               <img 
                 src="/lovable-uploads/d41bc7af-09af-4dc6-9d85-5457bb5e28b9.png" 
                 alt="Nexveil Logo" 
-                className="w-6 h-6 sm:w-8 sm:h-8 transition-all duration-500 group-hover:drop-shadow-2xl group-hover:drop-shadow-primary/70 group-hover:rotate-12 hover-glow"
+                className="w-8 h-8 transition-all duration-300 group-hover:drop-shadow-lg group-hover:drop-shadow-primary/50"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                 }}
@@ -71,35 +69,34 @@ const Navigation = () => {
               />
             </div>
 
-            {/* Enhanced Navigation Menu */}
-            <div className="hidden md:flex space-x-1 lg:space-x-2">
-              {sections.map((section, index) => (
+            {/* Navigation Menu */}
+            <div className="hidden md:flex space-x-2">
+              {sections.map((section) => (
                 <Button
                   key={section.id}
                   variant={activeSection === section.id ? 'cyber' : 'ghost'}
                   size="sm"
                   onClick={() => scrollToSection(section.id)}
-                  className={`font-mono text-xs lg:text-sm transition-all duration-300 hover:scale-105 hover-lift animate-slide-down ${
+                  className={`font-mono text-xs transition-all duration-300 hover:scale-105 ${
                     activeSection === section.id 
-                      ? 'shadow-xl shadow-primary/40 border-primary/60 glow-primary' 
-                      : 'hover:bg-primary/15 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20'
+                      ? 'shadow-lg shadow-primary/30 border-primary/50' 
+                      : 'hover:bg-primary/10 hover:border-primary/30'
                   }`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {section.label}
                 </Button>
               ))}
             </div>
 
-            {/* Enhanced Mobile Menu Button */}
+            {/* Mobile Menu Button */}
             <Button
               variant="outline"
               size="icon"
-              className="md:hidden transition-all duration-300 hover:scale-110 hover:bg-primary/15 hover:border-primary/60 hover-glow"
+              className="md:hidden transition-all duration-300 hover:scale-105 hover:bg-primary/10 hover:border-primary/50"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="w-4 h-4 text-primary animate-glitch" />
+                <X className="w-4 h-4 text-primary" />
               ) : (
                 <Menu className="w-4 h-4 text-primary" />
               )}
@@ -107,14 +104,14 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Enhanced Mobile Menu */}
-        <div className={`md:hidden transition-all duration-500 ${
+        {/* Mobile Menu */}
+        <div className={`md:hidden transition-all duration-300 ${
           isMobileMenuOpen 
-            ? 'max-h-96 opacity-100 bg-background/98 backdrop-blur-xl border-b border-primary/30 shadow-xl shadow-primary/10' 
+            ? 'max-h-96 opacity-100 bg-background/95 backdrop-blur-lg border-b border-primary/20' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="container mx-auto px-4 sm:px-6 py-4 space-y-3">
-            {sections.map((section, index) => (
+          <div className="container mx-auto px-6 py-4 space-y-2">
+            {sections.map((section) => (
               <Button
                 key={section.id}
                 variant={activeSection === section.id ? 'cyber' : 'ghost'}
@@ -123,12 +120,11 @@ const Navigation = () => {
                   scrollToSection(section.id);
                   setIsMobileMenuOpen(false);
                 }}
-                className={`w-full justify-start font-mono text-xs sm:text-sm transition-all duration-300 hover-lift animate-slide-right ${
+                className={`w-full justify-start font-mono text-xs transition-all duration-300 ${
                   activeSection === section.id 
-                    ? 'shadow-xl shadow-primary/40 border-primary/60 glow-primary' 
-                    : 'hover:bg-primary/15 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20'
+                    ? 'shadow-lg shadow-primary/30 border-primary/50' 
+                    : 'hover:bg-primary/10 hover:border-primary/30'
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {section.label}
               </Button>
