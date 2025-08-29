@@ -28,7 +28,7 @@ const AboutSection = () => {
   ];
 
   const clientStats = [
-    { metric: 'Satisfied Clients', value: '150+', description: 'Global Organizations' },
+    { metric: 'Satisfied Clients', value: '50+', description: 'Global Organizations' },
     { metric: 'Success Rate', value: '98.5%', description: 'Mission Completion' },
     { metric: 'Response Time', value: '<2hrs', description: 'Critical Operations' },
     { metric: 'Data Accuracy', value: '99.2%', description: 'Intelligence Verification' }
@@ -70,7 +70,7 @@ const AboutSection = () => {
             <Card className="cyber-border bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6 space-y-4">
                 <h3 className="font-display text-xl font-bold text-secondary">
-                  VISION_2030
+                  VISION
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   To become the global leader in intelligence services, setting new standards for accuracy, 

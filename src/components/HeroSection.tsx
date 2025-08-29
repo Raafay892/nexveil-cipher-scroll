@@ -7,7 +7,7 @@ const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   
-  const fullText = 'NEXVEIL ADVANCED INTELLIGENCE SERVICES';
+  const fullText = 'ADVANCED INTELLIGENCE SERVICES';
   
   useEffect(() => {
     let currentIndex = 0;
@@ -99,7 +99,7 @@ const HeroSection = () => {
 
         {/* Tagline */}
         <div className="space-y-4">
-          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed italic border-l-2 border-primary pl-6">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed italic pl-6">
             "Open source intelligence transforms scattered data into strategic advantage."
           </p>
           <p className="text-muted-foreground text-base max-w-xl mx-auto">

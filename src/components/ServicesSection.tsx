@@ -12,7 +12,7 @@ const ServicesSection = () => {
       code: 'OSINT',
       title: 'Open Source Intelligence',
       description: 'Advanced data collection and analysis from publicly available information sources.',
-      features: ['Social Media Analysis', 'Public Records Investigation', 'Digital Footprint Mapping', 'Online Threat Assessment'],
+      features: ['IMINT', 'HUMINT', 'GEOINT', 'TECHINT'],
       icon: '🔍'
     },
     {
@@ -44,7 +44,7 @@ const ServicesSection = () => {
       code: 'TECHINT',
       title: 'Technical Intelligence',
       description: 'Advanced intelligence gathered through technical means and technological analysis.',
-      features: ['Technical Vulnerability Assessment', 'Digital Forensics', 'Network Analysis', 'Cyber Threat Intelligence'],
+      features: ['Organizational Profiling', 'Assets Profiling', 'Military Profiling'],
       icon: '⚙️'
     }
   ];

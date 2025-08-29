@@ -43,7 +43,7 @@ const Index = () => {
                 NEXVEIL
               </div>
               <div className="font-mono text-xs text-muted-foreground">
-                © 2024 NEXVEIL Intelligence Services. All rights reserved.
+                © 2025 NEXVEIL Pvt Ltd. All rights reserved.
               </div>
             </div>
             
@@ -61,7 +61,7 @@ const Index = () => {
           <div className="mt-4 pt-4 border-t border-border/50">
             <div className="flex justify-center">
               <span className="text-xs font-mono text-muted-foreground">
-                VISITOR IP: {loading ? 'DETECTING...' : ip}
+                echo $YOUR_IP: {loading ? 'DETECTING...' : ip}
               </span>
             </div>
           </div>

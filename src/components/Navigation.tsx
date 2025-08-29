@@ -67,8 +67,6 @@ const Navigation = () => {
                   e.currentTarget.style.display = 'block';
                 }}
               />
-              <span className="ml-1">EXVEIL</span>
-              <span className="animate-cursor text-primary ml-1">_</span>
             </div>
 
             {/* Navigation Menu */}

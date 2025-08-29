@@ -101,10 +101,10 @@ const CybersecuritySection = () => {
             {Object.entries(cybersecurityServices).map(([key, service]) => (
               <Button
                 key={key}
-                variant={activeTab === key ? 'cyber' : 'outline'}
+                variant="outline"
                 size="sm"
                 onClick={() => setActiveTab(key)}
-                className="font-mono"
+                className={`font-mono cyber-red-hover ${activeTab === key ? 'cyber-red-active' : ''}`}
               >
                 {service.title.toUpperCase()}
               </Button>
